@@ -1,0 +1,16 @@
+<h1>Lekker Teacher</h1>
+
+<h3><%= "#{@post.bru_name}:"%></h3>
+<strong><%= @post.title %></strong>
+<p><%= @post.body %></p>
+
+<p><br>
+	<%= link_to 'Edit Post', edit_post_path %>
+	<%= button_to 'Delete Post', posts_path,
+				method: :delete,
+				data: {confirm: 'Are you sure?'} %>
+</p>
+
+<p>
+	<%= link_to 'All Posts', posts_path %>
+</p>
